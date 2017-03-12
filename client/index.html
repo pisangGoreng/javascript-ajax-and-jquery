@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">Gallery</h1>
+                    <h4 class="text-center">Sedari dulu hidup memang tidak mudah, namun warna setidaknya bisa memberikan arti setiap kali kedua bola mata indah Anda menatapnya</h2>
+                      <br>
+                    <p class="text-center"><button type="button" name="button">Tekan saya</button></p>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="1">
+                        <a><img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="2">
+                        <a><img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="3">
+                        <a><img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"></a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="4">
+                        <a><img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="5">
+                        <a><img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="6">
+                        <a><img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="section section-danger">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>Footer header</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,
+              <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+              <br>Ut enim ad minim veniam, quis nostrud</p>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-info text-right">
+              <br>
+              <br>
+            </p>
+            <div class="row">
+              <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 hidden-xs text-right">
+                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+<script type="text/javascript">
+
+    $("button").click(function(){
+        $.ajax({
+            type: 'GET',
+            url: 'http://localhost:3000/',
+            success: function(colorCode) {
+                var numberClass = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+                $(`.${numberClass}`).css("background-color", colorCode );
+            }
+        });
+    });
+
+</script>
+
+</html>
